@@ -1,0 +1,10 @@
+<h1>Artist Detail Page</h1>
+<br>
+<h3>Name: <%= @artist.name %></h3>
+<h3>Songs:</h3>
+<ul>
+  <% @artist.songs.collect do |song| %>
+  <li> <%= link_to song.title, song_path(song) %> </li>
+  <% end %>
+</ul>
+<h3>Song Count: <%= @artist.song_count %></h3>
